@@ -17,10 +17,10 @@ Select a name for your network.  Something like "puppernet" or "puppnet" is fine
 
 ![Puppeth](Screenshots/Puppeth.png)
 
-Select _2 (Configure new genesis), Enter_
-Select _1 (Create new genesis from scratch), Enter_
-Select _2 (Clique - proof-of-authority), Enter_
-Select _15 (How many seconds), Enter_ or accept the default and hit _Enter
+* Select _2 (Configure new genesis), Enter_
+* Select _1 (Create new genesis from scratch), Enter_
+* Select _2 (Clique - proof-of-authority), Enter_
+* Select _15 (How many seconds), Enter_ or accept the default and hit _Enter_
 
 ![PuppethConfig](Screenshots/PuppethConfig.png)
 
@@ -45,11 +45,11 @@ Hit _Enter_, and you should see "Configured new genesis block".
 Select _2 (Manage existing genesis)_, and hit _Enter_
 Select _2 (Export genesis configurations)_, and hit _Enter_
 Hit _Enter_ to accept the default.  
-<networkname>.json and <networkname>-harmony.json should have been created.
+{networkname}.json and {networkname}-harmony.json should have been created.
 
 ![json](Screenshots/PuppnetJSON.png)
 
-You may delete the harmony.json file using _rm <networkname>-harmony.json_
+You may delete the harmony.json file using _rm {networkname}-harmony.json_
   
 ![delHarmony](Screenshots/DelHarmony.png)  
 
@@ -69,9 +69,9 @@ You may hit _up_ on your keyboard to save time re-typing the command.
 
 ![Geth2](Screenshots/GethNode2.png)
 
-To Initialize node1, enter the command _./geth init <networkname>.json --datadir node1_, then _Enter_
+To Initialize node1, enter the command _./geth init {networkname}.json --datadir node1_, then _Enter_
 ![InitNode1](Screenshots/InitNode1.png)
-Repeat the process for node2, changing _node1_ to node2_
+Repeat the process for node2, changing _node1_ to _node2_
 
 ![InitNode2](Screenshots/InitNode2.png)
 
@@ -82,7 +82,7 @@ Ensure you keep a copy of the "Enode" address highlighted below, as you will nee
 ![RunNode1](Screenshots/RunNode1_Enode.png)
 
 Node2 is run differently.  You will use the following command:
-_./geth --datadir node2 --port 30304 --rpc --bootnodes "<enter enode path>" -ipcdisable_ , _Enter_
+_./geth --datadir node2 --port 30304 --rpc --bootnodes "{enter enode path}" -ipcdisable_ , _Enter_
 It must use a different port than node1, have remote program call enabled, connect to node 1, and most importantly, keep it as a test network.  This is what the flags in the command configure.
   
 ![RunNode2](Screenshots/RunNode2.png)
@@ -92,7 +92,6 @@ Your screen should look similar to the below screen shot.
 ![Running](Screenshots/RunNode_Running.png)
 
 Your blockchain is now running.  
-![Custom](Screenshots/CustomNode.png)
 
 ### MyCrypto
 
@@ -108,12 +107,12 @@ Select this network from the list.  Note I have several set up, but yours should
 
 
 Under "View and Send" paste in another address from your wallet in the "To Address" field, select an amount,
-and click _Send_.
+and click _Send Transaction_.
 Note the unit of measure. 1 ETH is significantly more than 1 wei.  Do not try to send more than you have available (plus the gas/transaction cost).
 
 ![CryptoAddress](Screenshots/SendScreen.png)
 
-After clicking _Send_, you should see a confirmation screen.  Review, then click _Send_.
+After clicking _Send Transaction_, you should see a confirmation screen.  Review, then click _Send_.
 ![Confirm](Screenshots/ConfirmScreen.png)
 
 If it worked correctly, you should see "Check Tx" at the bottom.  Click this to view the transaction details.
